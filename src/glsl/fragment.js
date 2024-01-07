@@ -24,15 +24,15 @@ float sdRect( in vec2 p,in vec2 center, in vec2 b )
 void main(){
     vec2 position=gl_FragCoord.xy/u_resolution.xy;
     vec3 color=vec3(0.0);
-    vec2 center=vec2(sin(u_time*2.0));
+    vec2 center=abs(vec2(sin(u_time*2.0)));
 
-    float circle=sdCircle( position,center,  0.1 );
+    float circle=sdCircle( position,center,  0.05 );
 
     // coloring circle 
     vec3 colcircle = (circle>0.0) ? vec3(1.0,0.0,0.0) : vec3(-1.0,1.0,0.0);
     
 
-    center=vec2(cos(u_time*2.0));
+    center=abs(vec2(cos(u_time*2.0)));
     float rect=sdRect(position,center,vec2(0.1,0.2));
     //coloring rectangle 
     vec3 colrect = (rect>0.0) ? vec3(1.0,0.0,0.0) : vec3(-1.0,0.0,1.0);
