@@ -30,11 +30,9 @@ void main(){
 
     // coloring circle 
     vec3 colcircle = (circle>0.0) ? vec3(1.0,0.0,0.0) : vec3(-1.0,1.0,0.0);
-    // col *= 1.0 - exp(-6.0*abs(circle));
-	// col *= 0.8 + 0.2*cos(150.0*circle);
-	// col = mix( col, vec3(1.0), 1.0-smoothstep(0.0,0.01,abs(circle)) );
+    
 
-center=vec2(cos(u_time*2.0));
+    center=vec2(cos(u_time*2.0));
     float rect=sdRect(position,center,vec2(0.1,0.2));
     //coloring rectangle 
     vec3 colrect = (rect>0.0) ? vec3(1.0,0.0,0.0) : vec3(-1.0,0.0,1.0);
