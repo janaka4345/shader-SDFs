@@ -2,14 +2,14 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
 
 import vs from "../glsl/vertexShader";
-import fs from "../glsl/fragment";
+import fs from "../glsl/fragmentCircleRain";
 
 let cw = 400;
 let ch = 400;
 let myShader;
 let img;
 
-export default function SDF(props) {
+export default function SDFCircleRain(props) {
   const [t, setT] = useState(0);
 
   return (
@@ -61,7 +61,7 @@ function preload(p5) {
 }
 function draw(p5) {
   return () => {
-    myShader.setUniform("u_time", p5.frameCount / 1000.0); // we divide millis by 1000 to convert it to seconds
+    // myShader.setUniform("u_time", p5.millis() / 1000.0); // we divide millis by 1000 to convert it to seconds
     // myShader.setUniform("u_mouse", [
     //   p5.mouseX,
     //   p5.map(p5.mouseY, 0, ch, ch, 0),
