@@ -4,13 +4,15 @@ import "./App.css";
  */
 
 import SDF from "./components/SDF"; //sdf 01 moving sdfs
-import SDFCircleRain from "./components/SDFCircleRain"; //sdf 01
+import SDFshapesRain from "./components/SDFshapesRain"; //sdf 01 moving sdfs
+import SDFCircleRain from "./components/SDFCircleRain"; //sdf circle rain 01
 
 function App() {
   return (
     <>
       {/* <SDF /> */}
-      <SDFCircleRain />
+      <SDFshapesRain />
+      {/* <SDFCircleRain /> */}
     </>
   );
 }
